@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say NO to Drugs & Smoking - Kampanye Hidup Sehat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 25%, #e67e22 50%, #d35400 75%, #e74c3c 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header::before {
+            content: '🚭';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.15;
+            top: -3rem;
+            right: -3rem;
+            animation: rotate 20s linear infinite, float 4s ease-in-out infinite;
+        }
+
+        header::after {
+            content: '⚠️';
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.15;
+            bottom: -2rem;
+            left: -2rem;
+            animation: pulse 3s ease-in-out infinite, wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5), 3px 3px 6px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease, glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255,255,255,0.5), 3px 3px 6px rgba(0,0,0,0.3);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 40px rgba(255,193,7,0.6), 3px 3px 6px rgba(0,0,0,0.3);
+            }
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            background: linear-gradient(90deg, #e74c3c 0%, #e67e22 20%, #f39c12 40%, #d35400 60%, #c0392b 80%, #e74c3c 100%);
+            background-size: 200% 100%;
+            animation: rainbowSlide 10s linear infinite;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        @keyframes rainbowSlide {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        nav a:hover::before {
+            left: 100%;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #e67e22 25%, #f39c12 50%, #d35400 75%, #c0392b 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: bold;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, #e74c3c, #e67e22, #f39c12, #d35400, #c0392b);
+            background-size: 200% 100%;
+            animation: rainbowSlide 3s linear infinite;
+            border-radius: 3px;
+            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.5);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 20%, #e67e22 40%, #d35400 60%, #c0392b 80%, #e74c3c 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🚭🚫⚠️💊🔥';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            top: 10%;
+            right: 5%;
+            animation: float 6s ease-in-out infinite, rotate 30s linear infinite;
+            letter-spacing: 2rem;
+        }
+
+        .hero::after {
+            content: '💔❌🆘⛔🚨';
+            position: absolute;
+            font-size: 7rem;
+            opacity: 0.1;
+            bottom: 10%;
+            left: 5%;
+            animation: float 8s ease-in-out infinite reverse, rotate 25s linear infinite reverse;
+            letter-spacing: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3), 3px 3px 6px rgba(0,0,0,0.4);
+            animation: fadeInDown 1s ease, glow 2s ease-in-out infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 50%, #27ae60 100%);
+            background-size: 200% 100%;
+            animation: buttonGradient 3s ease infinite;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes buttonGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.7);
+        }
+
+        .danger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .danger-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 6px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .danger-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #e74c3c, #e67e22);
+            animation: rainbowSlide 3s linear infinite;
+        }
+
+        .danger-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #e74c3c, #c0392b, #e74c3c);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #e67e22, #d35400, #e67e22);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #f39c12, #f1c40f, #f39c12);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #9b59b6, #8e44ad, #9b59b6);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:nth-child(5)::before {
+            background: linear-gradient(90deg, #3498db, #2980b9, #3498db);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:nth-child(6)::before {
+            background: linear-gradient(90deg, #95a5a6, #7f8c8d, #95a5a6);
+            background-size: 200% 100%;
+        }
+
+        .danger-card:hover {
+            transform: translateY(-10px) scale(1.03) rotate(1deg);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .danger-card:hover::before {
+            animation: rainbowSlide 1s linear infinite;
+        }
+
+        .danger-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+            animation: iconPulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 8px 30px rgba(231, 76, 60, 0.5);
+            }
+        }
+
+        .danger-card:hover .danger-icon {
+            animation: iconPulse 1s ease-in-out infinite, shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(-10px) rotate(-5deg); }
+            75% { transform: translateX(10px) rotate(5deg); }
+        }
+
+        .danger-card h3 {
+            background: linear-gradient(135deg, #dc3545, #fd7e14);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .poster-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            aspect-ratio: 3/4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            color: white;
+            text-align: center;
+            transform-style: preserve-3d;
+        }
+
+        .poster-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .poster-card:hover::before {
+            opacity: 1;
+        }
+
+        .poster-card:hover {
+            transform: scale(1.08) rotateY(5deg) rotateX(-5deg);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+
+        .poster-card.poster-1 {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #8e0000 100%);
+            animation: posterGlow1 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes posterGlow1 {
+            from { box-shadow: 0 10px 30px rgba(231, 76, 60, 0.5); }
+            to { box-shadow: 0 10px 40px rgba(192, 57, 43, 0.8), 0 0 50px rgba(231, 76, 60, 0.3); }
+        }
+
+        .poster-card.poster-2 {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 50%, #a04000 100%);
+            animation: posterGlow2 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes posterGlow2 {
+            from { box-shadow: 0 10px 30px rgba(230, 126, 34, 0.5); }
+            to { box-shadow: 0 10px 40px rgba(211, 84, 0, 0.8), 0 0 50px rgba(230, 126, 34, 0.3); }
+        }
+
+        .poster-card.poster-3 {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 50%, #5b2c6f 100%);
+            animation: posterGlow3 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes posterGlow3 {
+            from { box-shadow: 0 10px 30px rgba(155, 89, 182, 0.5); }
+            to { box-shadow: 0 10px 40px rgba(142, 68, 173, 0.8), 0 0 50px rgba(155, 89, 182, 0.3); }
+        }
+
+        .poster-card.poster-4 {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 50%, #196f3d 100%);
+            animation: posterGlow4 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes posterGlow4 {
+            from { box-shadow: 0 10px 30px rgba(39, 174, 96, 0.5); }
+            to { box-shadow: 0 10px 40px rgba(34, 153, 84, 0.8), 0 0 50px rgba(39, 174, 96, 0.3); }
+        }
+
+        .poster-icon {
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4));
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-15px) scale(1.1);
+            }
+        }
+
+        .poster-card:hover .poster-icon {
+            animation: iconBounce 0.6s ease-in-out infinite;
+        }
+
+        .poster-title {
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(0,0,0,0.5), 3px 3px 6px rgba(0,0,0,0.3);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 20px rgba(0,0,0,0.5), 3px 3px 6px rgba(0,0,0,0.3);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4), 3px 3px 6px rgba(0,0,0,0.3);
+            }
+        }
+
+        .poster-text {
+            font-size: 1.2rem;
+            line-height: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 500;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-left: 8px solid;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(180deg, transparent, currentColor, transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .story-card:hover::before {
+            opacity: 1;
+        }
+
+        .story-card:nth-child(1) {
+            border-left-color: #e74c3c;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        .story-card:nth-child(2) {
+            border-left-color: #e67e22;
+            animation: cardFloat 3s ease-in-out 0.5s infinite;
+        }
+
+        .story-card:nth-child(3) {
+            border-left-color: #9b59b6;
+            animation: cardFloat 3s ease-in-out 1s infinite;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .story-card:hover {
+            transform: translateX(15px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e74c3c, #e67e22, #f39c12);
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite, avatarPulse 2s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        @keyframes avatarPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 8px 20px rgba(231, 76, 60, 0.6);
+            }
+        }
+
+        .story-info h4 {
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+        }
+
+        .story-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .story-content {
+            color: #555;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .causes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cause-card {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            border-left: 6px solid transparent;
+            border-image: linear-gradient(135deg, #dc3545, #fd7e14) 1;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .cause-card:hover {
+            background: white;
+            box-shadow: 0 10px 25px rgba(220, 53, 69, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .cause-card h4 {
+            background: linear-gradient(135deg, #dc3545, #fd7e14);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+        }
+
+        .cause-number {
+            background: linear-gradient(135deg, #dc3545, #fd7e14);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .campaign-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 6px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .campaign-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            animation: rainbowSlide 3s linear infinite;
+        }
+
+        .campaign-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #27ae60, #2ecc71, #27ae60);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #3498db, #5dade2, #3498db);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #f39c12, #f1c40f, #f39c12);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #1abc9c, #16a085, #1abc9c);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(5)::before {
+            background: linear-gradient(90deg, #e91e63, #ad1457, #e91e63);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(6)::before {
+            background: linear-gradient(90deg, #9b59b6, #8e44ad, #9b59b6);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(7)::before {
+            background: linear-gradient(90deg, #34495e, #2c3e50, #34495e);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(8)::before {
+            background: linear-gradient(90deg, #16a085, #1abc9c, #16a085);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:nth-child(9)::before {
+            background: linear-gradient(90deg, #2980b9, #3498db, #2980b9);
+            background-size: 200% 100%;
+        }
+
+        .campaign-card:hover {
+            transform: translateY(-12px) scale(1.05) rotate(-2deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+        }
+
+        .campaign-card:hover::before {
+            animation: rainbowSlide 1s linear infinite;
+        }
+
+        .campaign-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+            animation: campaignBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes campaignBounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-10px) scale(1.05);
+            }
+        }
+
+        .campaign-card:hover .campaign-icon {
+            animation: campaignBounce 0.8s ease-in-out infinite, spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .campaign-card h3 {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 5px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: statRotate 10s linear infinite;
+        }
+
+        @keyframes statRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .stat-card:nth-child(1) {
+            border-top-color: #e74c3c;
+            animation: statFloat 3s ease-in-out infinite;
+        }
+
+        .stat-card:nth-child(2) {
+            border-top-color: #e67e22;
+            animation: statFloat 3s ease-in-out 0.5s infinite;
+        }
+
+        .stat-card:nth-child(3) {
+            border-top-color: #f39c12;
+            animation: statFloat 3s ease-in-out 1s infinite;
+        }
+
+        .stat-card:nth-child(4) {
+            border-top-color: #9b59b6;
+            animation: statFloat 3s ease-in-out 1.5s infinite;
+        }
+
+        @keyframes statFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .stat-card:hover {
+            transform: translateY(-12px) scale(1.08);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #e74c3c, #e67e22, #f39c12);
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #fff5db 100%);
+            border-left: 6px solid #ffc107;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+        }
+
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box p {
+            color: #856404;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 25%, #e67e22 50%, #d35400 75%, #c0392b 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            box-shadow: 0 -6px 25px rgba(231, 76, 60, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '💚✨🌟';
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .quote-box {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 3px solid #28a745;
+        }
+
+        .quote-box blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .quote-box cite {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .poster-title {
+                font-size: 1.5rem;
+            }
+        }
+    
+        /* ===== MODAL OVERLAY ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-box {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            width: 90%;
+            max-width: 480px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem; right: 1.2rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .modal-close:hover { color: #e74c3c; }
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.3rem;
+        }
+        .modal-subtitle {
+            color: #888;
+            margin-bottom: 1.8rem;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+            color: #333;
+            background: #fafafa;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231,76,60,0.12);
+            background: white;
+        }
+        .form-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+        .btn-form {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+            box-shadow: 0 5px 15px rgba(231,76,60,0.35);
+        }
+        .btn-form:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231,76,60,0.5);
+        }
+        .modal-switch {
+            text-align: center;
+            margin-top: 1.2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .modal-switch a {
+            color: #e74c3c;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .modal-switch a:hover { text-decoration: underline; }
+        .modal-icon {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+        /* ===== AUTH BUTTONS IN NAV ===== */
+        .nav-auth {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+        .btn-nav {
+            padding: 0.4rem 1.1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .btn-nav-login {
+            background: transparent;
+            color: white;
+        }
+        .btn-nav-login:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .btn-nav-register {
+            background: white;
+            color: #e74c3c;
+        }
+        .btn-nav-register:hover {
+            background: #ffe5e5;
+            transform: translateY(-2px);
+        }
+        /* ===== SUCCESS TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 5px 20px rgba(40,167,69,0.4);
+            z-index: 99999;
+            transition: transform 0.4s ease;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        /* ===== PENGADUAN SECTION ===== */
+        #pengaduan-section {
+            background: linear-gradient(135deg, #fff5f5, #ffe5e5);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+        }
+        .pengaduan-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .pengaduan-info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #e74c3c;
+        }
+        .pengaduan-info-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .pengaduan-info-card h4 { color: #e74c3c; margin-bottom: 0.3rem; font-size: 1rem; }
+        .pengaduan-info-card p { color: #777; font-size: 0.85rem; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+        .pengaduan-form-wrapper {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .label-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+        }
+        .star { color: #e74c3c; }
+
+    
+        /* ===== LOGIN GATE ===== */
+        #login-gate {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 20%, #e67e22 40%, #d35400 60%, #c0392b 80%, #e74c3c 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #login-gate::before {
+            content: '🚭🚫⚠️💊';
+            position: absolute;
+            font-size: 9rem;
+            opacity: 0.08;
+            top: 5%;
+            right: 3%;
+            animation: float 6s ease-in-out infinite, rotate 30s linear infinite;
+            letter-spacing: 2rem;
+        }
+
+        #login-gate::after {
+            content: '💔❌🆘⛔';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.08;
+            bottom: 5%;
+            left: 3%;
+            animation: float 8s ease-in-out infinite reverse, rotate 25s linear infinite reverse;
+            letter-spacing: 2rem;
+        }
+
+        .gate-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem 2.8rem;
+            width: 90%;
+            max-width: 440px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+        }
+
+        .gate-logo {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .gate-logo span {
+            font-size: 4rem;
+            display: inline-block;
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        .gate-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.3rem;
+        }
+
+        .gate-subtitle {
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .gate-tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 1.8rem;
+        }
+
+        .gate-tab {
+            flex: 1;
+            padding: 0.6rem;
+            border: none;
+            background: transparent;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .gate-tab.active {
+            background: white;
+            color: #e74c3c;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+
+        .gate-form { display: none; }
+        .gate-form.active { display: block; }
+
+        .gate-group {
+            margin-bottom: 1.1rem;
+        }
+
+        .gate-group label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 0.4rem;
+            font-size: 0.88rem;
+        }
+
+        .gate-group input,
+        .gate-group select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 0.97rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+            color: #333;
+        }
+
+        .gate-group input:focus,
+        .gate-group select:focus {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231,76,60,0.1);
+            background: white;
+        }
+
+        .gate-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .gate-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(231,76,60,0.4);
+            margin-top: 0.5rem;
+        }
+
+        .gate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(231,76,60,0.55);
+        }
+
+        .gate-footer {
+            text-align: center;
+            margin-top: 1.2rem;
+            font-size: 0.87rem;
+            color: #bbb;
+        }
+
+        .gate-skip {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .gate-skip a {
+            color: #ccc;
+            font-size: 0.82rem;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        .gate-skip a:hover { color: #e74c3c; }
+
+        /* hide main content until logged in */
+        #main-content {
+            display: none;
+        }
+
+        .gate-error {
+            background: #fff0f0;
+            border: 1px solid #ffcccc;
+            border-radius: 8px;
+            color: #e74c3c;
+            padding: 0.7rem 1rem;
+            font-size: 0.87rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .gate-error.show { display: block; }
+
+        .gate-success-badge {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border-radius: 10px;
+            padding: 0.7rem 1rem;
+            font-size: 0.87rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .gate-success-badge.show { display: block; }
+
+        .pw-wrapper { position: relative; }
+        .pw-toggle {
+            position: absolute;
+            right: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: #bbb;
+            user-select: none;
+        }
+
+        .gate-divider {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 1rem 0;
+            color: #ccc;
+            font-size: 0.82rem;
+        }
+        .gate-divider::before, .gate-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #eee;
+        }
+
+        #login-gate.fade-out {
+            animation: gateOut 0.6s ease forwards;
+        }
+
+        @keyframes gateOut {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.05); pointer-events: none; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="login-gate">
+    <div class="gate-card">
+        <div class="gate-logo"><span>🚭</span></div>
+        <div class="gate-title">Say NO to Drugs & Smoking</div>
+        <div class="gate-subtitle">SMA Methodist Lubuk Pakam — Masuk atau daftar untuk melanjutkan</div>
+
+        <div class="gate-tabs">
+            <button class="gate-tab active" id="tab-login" onclick="switchTab('login')">🔑 Masuk</button>
+            <button class="gate-tab" id="tab-register" onclick="switchTab('register')">✨ Daftar</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="gate-form active" id="gform-login">
+            <div class="gate-error" id="login-error">Email atau kata sandi salah. Coba lagi.</div>
+            <div class="gate-group">
+                <label>Email / Username</label>
+                <input type="text" id="login-user" placeholder="Masukkan email atau username" autocomplete="username">
+            </div>
+            <div class="gate-group">
+                <label>Kata Sandi</label>
+                <div class="pw-wrapper">
+                    <input type="password" id="login-pass" placeholder="Masukkan kata sandi" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
+                    <span class="pw-toggle" onclick="togglePw('login-pass',this)">👁️</span>
+                </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;font-size:0.85rem;">
+                <label style="display:flex;align-items:center;gap:0.4rem;cursor:pointer;color:#777;">
+                    <input type="checkbox" style="width:auto;accent-color:#e74c3c;"> Ingat saya
+                </label>
+                <a href="#" style="color:#e74c3c;font-weight:600;font-size:0.85rem;">Lupa kata sandi?</a>
+            </div>
+            <button class="gate-btn" onclick="doLogin()">🔑 Masuk Sekarang</button>
+            <div class="gate-footer">Demo: username <strong>admin</strong> / sandi <strong>1234</strong></div>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div class="gate-form" id="gform-register">
+            <div class="gate-success-badge" id="reg-success">🎉 Akun berhasil dibuat! Silakan masuk.</div>
+            <div class="gate-row">
+                <div class="gate-group">
+                    <label>Nama Depan <span style="color:#e74c3c">*</span></label>
+                    <input type="text" id="reg-fname" placeholder="Nama depan">
+                </div>
+                <div class="gate-group">
+                    <label>Nama Belakang</label>
+                    <input type="text" placeholder="Nama belakang">
+                </div>
+            </div>
+            <div class="gate-group">
+                <label>Email <span style="color:#e74c3c">*</span></label>
+                <input type="email" id="reg-email" placeholder="contoh@email.com">
+            </div>
+            <div class="gate-group">
+                <label>Kelas / Instansi</label>
+                <select>
+                    <option value="">-- Pilih Kelas/Instansi --</option>
+                    <option>Kelas 10</option>
+                    <option>Kelas 11</option>
+                    <option>Kelas 12</option>
+                    <option>Guru / Staff</option>
+                    <option>Masyarakat Umum</option>
+                </select>
+            </div>
+            <div class="gate-group">
+                <label>Kata Sandi <span style="color:#e74c3c">*</span></label>
+                <div class="pw-wrapper">
+                    <input type="password" id="reg-pass" placeholder="Min. 6 karakter">
+                    <span class="pw-toggle" onclick="togglePw('reg-pass',this)">👁️</span>
+                </div>
+            </div>
+            <div style="margin-bottom:1rem;font-size:0.85rem;color:#666;">
+                <label style="display:flex;align-items:flex-start;gap:0.5rem;cursor:pointer;">
+                    <input type="checkbox" id="reg-agree" style="width:auto;margin-top:3px;accent-color:#e74c3c;">
+                    Saya menyetujui syarat & ketentuan dan berkomitmen hidup bebas narkoba & rokok
+                </label>
+            </div>
+            <button class="gate-btn" onclick="doRegister()">🌟 Daftar Sekarang</button>
+        </div>
+
+        <div class="gate-skip">
+            <a onclick="skipLogin()">Lewati — Lanjut sebagai Tamu →</a>
+        </div>
+    </div>
+</div>
+
+<div id="main-content">
+    <header>
+        <div class="header-content">
+            <h1>🚭 SAY NO TO DRUGS & SMOKING 🚭</h1>
+            <p>Lindungi Masa Depanmu, Tolak Narkoba dan Rokok!</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#bahaya">Bahaya</a></li>
+            <li><a href="#poster">Poster Digital</a></li>
+            <li><a href="#cerita">Cerita Nyata</a></li>
+            <li><a href="#penyebab">Penyebab</a></li>
+            <li><a href="#kampanye">Kampanye Sehat</a></li>
+            <li><a href="#pengaduan">Pengaduan</a></li>
+        </ul>
+        <div class="nav-auth" style="display:flex;justify-content:center;gap:0.5rem;margin-top:0.5rem;padding-bottom:0.3rem;">
+            <button class="btn-nav btn-nav-login" onclick="openModal('modal-login')">🔑 Masuk</button>
+            <button class="btn-nav btn-nav-register" onclick="openModal('modal-register')">✨ Daftar</button>
+        </div>
+    </nav>
+
+    <section id="beranda" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>SMA METHODIST LUBUK PAKAM</h2>
+                <p>Mari bersama-sama membangun kesadaran untuk hidup sehat tanpa narkoba dan rokok. Masa depanmu terlalu berharga untuk dirusak!</p>
+                <a href="#kampanye" class="btn">Mulai Hidup Sehat</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">3,3 Juta</div>
+                <div class="stat-label">Pengguna Narkoba di Indonesia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">70 Juta</div>
+                <div class="stat-label">Perokok Aktif di Indonesia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Orang Meninggal/Hari Karena Narkoba</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5,9 Juta</div>
+                <div class="stat-label">Perokok Anak Usia 10-18 Tahun</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bahaya" class="container">
+        <h2 class="section-title">Edukasi Bahaya Narkoba dan Rokok</h2>
+        
+        <div class="warning-box">
+            <h4>⚠️ PERINGATAN PENTING!</h4>
+            <p>Narkoba dan rokok adalah pintu gerbang kehancuran. Satu keputusan salah bisa merusak seluruh hidupmu. Jangan pernah coba-coba!</p>
+        </div>
+
+        <div class="danger-grid">
+            <div class="danger-card">
+                <div class="danger-icon">🧠</div>
+                <h3>Kerusakan Otak</h3>
+                <p>Narkoba dan rokok merusak sel-sel otak, menurunkan kemampuan berpikir, daya ingat, dan konsentrasi belajar. Efek jangka panjang bisa menyebabkan gangguan mental permanen.</p>
+            </div>
+            <div class="danger-card">
+                <div class="danger-icon">💔</div>
+                <h3>Penyakit Jantung</h3>
+                <p>Zat kimia dalam rokok menyumbat pembuluh darah, meningkatkan risiko serangan jantung, stroke, dan kematian mendadak bahkan di usia muda.</p>
+            </div>
+            <div class="danger-card">
+                <div class="danger-icon">🫁</div>
+                <h3>Kanker Paru-Paru</h3>
+                <p>90% kasus kanker paru-paru disebabkan oleh rokok. Tar dan karbon monoksida merusak jaringan paru-paru secara permanen dan fatal.</p>
+            </div>
+            <div class="danger-card">
+                <div class="danger-icon">⛓️</div>
+                <h3>Kecanduan Parah</h3>
+                <p>Nikotin dan narkoba menyebabkan ketergantungan fisik dan psikologis yang sangat sulit dihentikan. Sekali terjebak, sangat sulit keluar.</p>
+            </div>
+            <div class="danger-card">
+                <div class="danger-icon">👥</div>
+                <h3>Rusaknya Masa Depan</h3>
+                <p>Putus sekolah, kehilangan pekerjaan, hancurnya hubungan keluarga, dan stigma sosial adalah konsekuensi nyata dari penyalahgunaan narkoba dan rokok.</p>
+            </div>
+            <div class="danger-card">
+                <div class="danger-icon">💀</div>
+                <h3>Kematian Dini</h3>
+                <p>Overdosis narkoba dan penyakit dari rokok membunuh jutaan orang setiap tahun. Jangan jadi korban berikutnya!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="poster" class="container">
+        <h2 class="section-title">Poster Digital Anti Narkoba & Rokok</h2>
+        <div class="poster-grid">
+            <div class="poster-card poster-1">
+                <div class="poster-icon">🚫</div>
+                <div class="poster-title">STOP NARKOBA!</div>
+                <div class="poster-text">
+                    Jangan Rusak Hidupmu<br>
+                    Dengan Satu Keputusan Bodoh<br>
+                    <strong>KATAKAN TIDAK!</strong>
+                </div>
+            </div>
+            <div class="poster-card poster-2">
+                <div class="poster-icon">🚭</div>
+                <div class="poster-title">ROKOK MEMBUNUH</div>
+                <div class="poster-text">
+                    Setiap Batang Rokok<br>
+                    Memotong 11 Menit Hidupmu<br>
+                    <strong>PILIH HIDUP SEHAT!</strong>
+                </div>
+            </div>
+            <div class="poster-card poster-3">
+                <div class="poster-icon">⚠️</div>
+                <div class="poster-title">BAHAYA TERSEMBUNYI</div>
+                <div class="poster-text">
+                    4000+ Zat Kimia Beracun<br>
+                    70+ Penyebab Kanker<br>
+                    <strong>DALAM SATU BATANG ROKOK!</strong>
+                </div>
+            </div>
+            <div class="poster-card poster-4">
+                <div class="poster-icon">💚</div>
+                <div class="poster-title">GENERASI BERSIH</div>
+                <div class="poster-text">
+                    Kami Generasi Sehat<br>
+                    Tanpa Narkoba & Rokok<br>
+                    <strong>JOIN THE MOVEMENT!</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cerita" class="container">
+        <h2 class="section-title">Cerita Nyata: Dampak Buruk yang Mengubah Hidup</h2>
+        
+        <div class="story-card">
+            <div class="story-header">
+                <div class="story-avatar">😢</div>
+                <div class="story-info">
+                    <h4>FA (16 tahun) - Korban Overdosis Narkoba</h4>
+                    <p>Jakarta Selatan, April 2024</p>
+                </div>
+            </div>
+            <div class="story-content">
+                <p>"FA, seorang siswi berusia 16 tahun, ditemukan meninggal di RSUD Kebayoran Baru setelah mengalami overdosis. Menurut laporan Polres Metro Jakarta Selatan, FA mengalami kejang-kejang setelah mengonsumsi sabu dan inex yang diberikan oleh beberapa orang dewasa. Kejadian tragis ini terjadi di sebuah hotel di kawasan Senopati. FA adalah remaja ceria dengan masa depan cerah di depannya. Orangtuanya tidak pernah menyangka bahwa pergaulan yang salah akan merenggut nyawa putri tercintanya dalam sekejap. Kasus ini menjadi pengingat keras bahwa narkoba tidak mengenal usia - satu keputusan salah bisa menjadi yang terakhir. <strong>JANGAN PERNAH COBA-COBA NARKOBA!</strong>"</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <div class="story-header">
+                <div class="story-avatar">😭</div>
+                <div class="story-info">
+                    <h4>Kisah Perokok Pasif - Dampak yang Tak Terlihat</h4>
+                    <p>Indonesia, 2024</p>
+                </div>
+            </div>
+            <div class="story-content">
+                <p>"Banyak anak Indonesia menjadi korban tanpa mereka sadari. Ibu hamil yang terpapar asap rokok mengalami peningkatan risiko keguguran, kelahiran prematur, dan Berat Badan Lahir Rendah (BBLR). Seorang remaja bernama Dinda (nama samaran), bercerita bahwa ayahnya adalah perokok berat sejak ia kecil. Di usia 14 tahun, Dinda didiagnosis asma kronis dan sering sesak napas. 'Saya tidak pernah merokok, tapi saya yang merasakan akibatnya. Setiap hari menghirup asap rokok di rumah. Sekarang saya harus pakai inhaler seumur hidup,' ujar Dinda dengan mata berkaca-kaca. Dokter menjelaskan bahwa kondisinya adalah akibat paparan asap rokok selama bertahun-tahun. <strong>Rokok tidak hanya membunuh perokok, tapi juga orang-orang di sekitarnya!</strong>"</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <div class="story-header">
+                <div class="story-avatar">💔</div>
+                <div class="story-info">
+                    <h4>Darurat Narkoba - Fakta Mengejutkan Indonesia</h4>
+                    <p>Data BNN & Polri, 2024-2025</p>
+                </div>
+            </div>
+            <div class="story-content">
+                <p>"Indonesia dalam kondisi DARURAT NARKOBA. Angka prevalensi penyalahgunaan narkoba di Indonesia mencapai 3,3 juta orang, yang didominasi oleh generasi muda, terutama remaja yang berusia 15 hingga 24 tahun, demikian disampaikan Menko Polkam Budi Gunawan pada Desember 2024. Yang lebih mengkhawatirkan, menurut data BNN, sebanyak 2,2 juta remaja Indonesia menjadi penyalahguna narkoba, dan angka ini bisa terus mengalami kenaikan setiap tahunnya. Sepanjang Januari-Oktober 2025, Polri mengungkap 38.934 kasus narkoba dengan 51.763 tersangka, termasuk 150 anak di bawah umur. Setiap hari, rata-rata 50 orang meninggal karena narkoba di Indonesia. Artinya sekitar 18.000 nyawa melayang per tahun. Ini bukan sekadar angka statistik - ini adalah kakak, adik, teman, atau tetangga kita. <strong>NARKOBA ADALAH PEMBUNUH MASA DEPAN GENERASI INDONESIA!</strong>"</p>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <blockquote>"Hidup adalah anugerah yang terlalu berharga untuk dirusak oleh keputusan sesaat. Pilih dengan bijak, karena masa depanmu dimulai dari pilihan hari ini."</blockquote>
+            <cite>- Pesan untuk Generasi Muda Indonesia</cite>
+        </div>
+    </section>
+
+    <section id="penyebab" class="container">
+        <h2 class="section-title">Mengapa Remaja Rentan Terjerumus?</h2>
+        
+        <div class="causes-grid">
+            <div class="cause-card">
+                <h4><span class="cause-number">1</span> Tekanan Teman Sebaya</h4>
+                <p>Keinginan untuk diterima dalam kelompok pertemanan sering membuat remaja mengikuti perilaku negatif, termasuk merokok dan menggunakan narkoba agar terlihat "keren" atau "gaul".</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">2</span> Rasa Ingin Tahu</h4>
+                <p>Masa remaja adalah fase eksplorasi. Rasa penasaran yang tinggi tanpa pemahaman bahaya bisa membuat remaja mencoba-coba hal berbahaya tanpa mempertimbangkan konsekuensinya.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">3</span> Stress & Depresi</h4>
+                <p>Tekanan akademik, masalah keluarga, atau percintaan membuat remaja mencari pelarian. Narkoba dan rokok sering dijadikan "solusi" palsu untuk melupakan masalah.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">4</span> Kurangnya Pengawasan</h4>
+                <p>Minimnya perhatian orangtua dan guru membuat remaja mudah terpengaruh pergaulan bebas. Mereka merasa tidak ada yang peduli, sehingga mudah terjerumus.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">5</span> Media & Iklan</h4>
+                <p>Glamorisasi merokok di film, media sosial, dan lingkungan sekitar membuat remaja menganggap merokok sebagai gaya hidup modern dan keren.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">6</span> Mudahnya Akses</h4>
+                <p>Rokok dijual bebas di warung-warung, bahkan kepada anak di bawah umur. Peredaran narkoba yang masif membuat remaja mudah mendapatkannya.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">7</span> Rendahnya Edukasi</h4>
+                <p>Kurangnya pemahaman tentang bahaya sebenarnya dari narkoba dan rokok membuat remaja meremehkan risikonya. Mereka pikir "tidak akan terjadi pada saya".</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">8</span> Broken Home</h4>
+                <p>Keluarga yang tidak harmonis, perceraian orangtua, atau kekerasan dalam rumah tangga membuat remaja mencari kebahagiaan semu melalui narkoba dan rokok.</p>
+            </div>
+            <div class="cause-card">
+                <h4><span class="cause-number">9</span> Ekonomi & Lingkungan</h4>
+                <p>Lingkungan pergaulan yang salah, kemiskinan, atau sebaliknya kelebihan uang tanpa kontrol orangtua bisa mendorong remaja ke arah penyalahgunaan zat.</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h4>🛡️ PENTING UNTUK DIINGAT!</h4>
+            <p>Tidak ada alasan yang cukup kuat untuk mencoba narkoba atau rokok. Apapun masalahmu, ada solusi yang jauh lebih baik dan tidak akan menghancurkan masa depanmu!</p>
+        </div>
+    </section>
+
+    <section id="kampanye" class="container">
+        <h2 class="section-title">Kampanye Hidup Sehat: Pencegahan Diri</h2>
+        
+        <div class="campaign-grid">
+            <div class="campaign-card">
+                <div class="campaign-icon">💪</div>
+                <h3>Olahraga Rutin</h3>
+                <p>Aktifitas fisik seperti jogging, basket, futsal, atau yoga meningkatkan endorfin (hormon bahagia) alami. Ini adalah cara sehat mengatasi stress tanpa zat berbahaya.</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">📚</div>
+                <h3>Fokus Pendidikan</h3>
+                <p>Sibukkan diri dengan kegiatan positif: belajar, membaca, ikut organisasi, atau mengembangkan hobi. Masa depan cemerlang dimulai dari rajin belajar hari ini!</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">👨‍👩‍👧</div>
+                <h3>Komunikasi Keluarga</h3>
+                <p>Ceritakan masalahmu ke orangtua atau anggota keluarga yang kamu percaya. Mereka mencintaimu dan akan membantu menemukan solusi terbaik.</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🎨</div>
+                <h3>Salurkan Kreativitas</h3>
+                <p>Musik, melukis, menulis, coding, atau crafting adalah cara produktif mengekspresikan diri. Jadikan passion-mu sebagai pelarian positif!</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🤝</div>
+                <h3>Pilih Teman Baik</h3>
+                <p>Lingkungan sangat mempengaruhi. Berteman dengan orang-orang yang mendukung mimpimu, bukan yang mengajakmu ke hal negatif. Berani bilang TIDAK!</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🧘</div>
+                <h3>Mental Health Awareness</h3>
+                <p>Belajar mengelola emosi dan stress dengan mindfulness, meditasi, atau konseling. Mencari bantuan profesional bukan tanda lemah, tapi bukti kekuatan!</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🌟</div>
+                <h3>Punya Tujuan Hidup</h3>
+                <p>Tuliskan mimpi dan targetmu. Ketika kamu punya visi masa depan yang jelas, kamu akan berpikir dua kali sebelum melakukan hal yang bisa merusaknya.</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🍎</div>
+                <h3>Gaya Hidup Sehat</h3>
+                <p>Makan bergizi, tidur cukup, minum air putih, hindari junk food berlebihan. Tubuh sehat = pikiran jernih = keputusan bijak!</p>
+            </div>
+            <div class="campaign-card">
+                <div class="campaign-icon">🎯</div>
+                <h3>Ikut Komunitas Positif</h3>
+                <p>Bergabung dengan klub olahraga, komunitas relawan, pecinta alam, atau organisasi keagamaan. Temukan support system yang menguatkan, bukan merusak.</p>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <blockquote>"Kesuksesan terbesar adalah ketika kamu bisa mengatakan TIDAK pada godaan dan TIDAK pada tekanan teman. Kamu lebih kuat dari yang kamu kira!"</blockquote>
+            <cite>- Motivasi Generasi Anti Narkoba</cite>
+        </div>
+    </section>
+
+    <section class="container">
+        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 3rem; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Butuh Bantuan?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Jika kamu atau temanmu sedang berjuang melawan kecanduan, jangan ragu untuk mencari bantuan!</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">📞 BIMBINGAN KONSELING SMA</h4>
+                    <p style="font-size: 1.5rem; font-weight: bold;">0822-9429-4757</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">🏥 Rumah Sakit Terdekat</h4>
+                    <p>Konsultasi Gratis</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">👨‍⚕️ KEPALA SEKOLAH</h4>
+                    <p style="font-size: 1.5rem; font-weight: bold;">0812-6497-6447</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengaduan" class="container">
+        <h2 class="section-title">Pengaduan & Pelaporan</h2>
+        <div id="pengaduan-section">
+            <div class="pengaduan-info">
+                <div class="pengaduan-info-card">
+                    <div class="icon">🔒</div>
+                    <h4>100% Anonim</h4>
+                    <p>Identitas Anda dapat kami rahasiakan sepenuhnya jika diminta</p>
+                </div>
+                <div class="pengaduan-info-card">
+                    <div class="icon">⚡</div>
+                    <h4>Respon Cepat</h4>
+                    <p>Pengaduan akan ditindaklanjuti dalam 1x24 jam kerja</p>
+                </div>
+                <div class="pengaduan-info-card">
+                    <div class="icon">🤝</div>
+                    <h4>Dilindungi</h4>
+                    <p>Pelapor dilindungi undang-undang dari tindakan balasan</p>
+                </div>
+                <div class="pengaduan-info-card">
+                    <div class="icon">📊</div>
+                    <h4>Ditangani Serius</h4>
+                    <p>Setiap laporan diteruskan ke pihak berwenang terkait</p>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <p style="font-size:1.1rem;color:#555;margin-bottom:1.5rem;">
+                    Jika kamu melihat atau mengetahui adanya kasus penyalahgunaan narkoba, penjualan rokok ilegal, atau pelanggaran terkait, <strong>laporkan sekarang!</strong> Aksimu bisa menyelamatkan nyawa.
+                </p>
+                <button onclick="openModal('modal-pengaduan')" style="display:inline-block;padding:1.2rem 3rem;background:linear-gradient(135deg,#e74c3c,#c0392b);color:white;border:none;border-radius:50px;font-size:1.15rem;font-weight:700;cursor:pointer;box-shadow:0 8px 25px rgba(231,76,60,0.4);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 35px rgba(231,76,60,0.55)'" onmouseout="this.style.transform='';this.style.boxShadow='0 8px 25px rgba(231,76,60,0.4)'">
+                    📢 Buat Pengaduan Sekarang
+                </button>
+                <p style="margin-top:1rem;font-size:0.9rem;color:#999;">atau hubungi langsung: BNN 0800-1-622622 (Bebas Pulsa) | Polisi 110</p>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="container">
+            <p>&copy; Cyndi, Felicia, Rosalind, Vonie, Cloude.AI</p>
+            <p style="margin-top: 1rem; font-size: 1.2rem;">💚 Hidup Sehat adalah Pilihan Terbaik 💚</p>
+        </div>
+    </footer>
+
+    <!-- ====== MODAL: LOGIN ====== -->
+    <div class="modal-overlay" id="modal-login">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal-login')">&times;</button>
+            <div class="modal-icon">🔐</div>
+            <div class="modal-title">Masuk Akun</div>
+            <div class="modal-subtitle">Selamat datang kembali, Generasi Sehat!</div>
+            <div class="form-group">
+                <label>Email / Username</label>
+                <input type="text" placeholder="Masukkan email atau username">
+            </div>
+            <div class="form-group">
+                <label>Kata Sandi</label>
+                <input type="password" placeholder="Masukkan kata sandi">
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;font-size:0.88rem;">
+                <label style="display:flex;align-items:center;gap:0.4rem;cursor:pointer;color:#555;">
+                    <input type="checkbox" style="width:auto;accent-color:#e74c3c;"> Ingat saya
+                </label>
+                <a href="#" style="color:#e74c3c;font-weight:600;">Lupa kata sandi?</a>
+            </div>
+            <button class="btn-form" onclick="handleLogin()">🔑 Masuk Sekarang</button>
+            <div class="modal-switch">
+                Belum punya akun? <a onclick="switchModal('modal-login','modal-register')">Daftar di sini</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MODAL: REGISTER ====== -->
+    <div class="modal-overlay" id="modal-register">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('modal-register')">&times;</button>
+            <div class="modal-icon">✨</div>
+            <div class="modal-title">Daftar Akun</div>
+            <div class="modal-subtitle">Bergabunglah dengan Gerakan Anti Narkoba & Rokok!</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nama Depan <span class="star">*</span></label>
+                    <input type="text" placeholder="Nama depan">
+                </div>
+                <div class="form-group">
+                    <label>Nama Belakang</label>
+                    <input type="text" placeholder="Nama belakang">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email <span class="star">*</span></label>
+                <input type="email" placeholder="contoh@email.com">
+            </div>
+            <div class="form-group">
+                <label>No. Telepon / WhatsApp</label>
+                <input type="tel" placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="form-group">
+                <label>Kelas / Instansi</label>
+                <select>
+                    <option value="">-- Pilih Kelas/Instansi --</option>
+                    <option>Kelas 10</option>
+                    <option>Kelas 11</option>
+                    <option>Kelas 12</option>
+                    <option>Guru / Staff</option>
+                    <option>Masyarakat Umum</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Kata Sandi <span class="star">*</span></label>
+                <input type="password" placeholder="Min. 8 karakter">
+            </div>
+            <div class="form-group">
+                <label>Konfirmasi Kata Sandi <span class="star">*</span></label>
+                <input type="password" placeholder="Ulangi kata sandi">
+            </div>
+            <div style="margin-bottom:1rem;font-size:0.88rem;color:#555;">
+                <label style="display:flex;align-items:flex-start;gap:0.5rem;cursor:pointer;">
+                    <input type="checkbox" style="width:auto;margin-top:2px;accent-color:#e74c3c;">
+                    Saya menyetujui syarat &amp; ketentuan dan berkomitmen untuk hidup bebas narkoba &amp; rokok
+                </label>
+            </div>
+            <button class="btn-form" onclick="handleRegister()">🌟 Daftar Sekarang</button>
+            <div class="modal-switch">
+                Sudah punya akun? <a onclick="switchModal('modal-register','modal-login')">Masuk di sini</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MODAL: PENGADUAN ====== -->
+    <div class="modal-overlay" id="modal-pengaduan">
+        <div class="modal-box" style="max-width:560px;">
+            <button class="modal-close" onclick="closeModal('modal-pengaduan')">&times;</button>
+            <div class="modal-icon">📢</div>
+            <div class="modal-title">Formulir Pengaduan</div>
+            <div class="modal-subtitle">Laporkan kasus narkoba atau pelanggaran dengan aman & terpercaya</div>
+            <div class="form-group">
+                <label>Nama Pelapor <span class="label-badge">OPSIONAL</span></label>
+                <input type="text" placeholder="Boleh kosong jika ingin anonim">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kategori Pengaduan <span class="star">*</span></label>
+                    <select>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option>Penjualan Narkoba</option>
+                        <option>Penggunaan Narkoba</option>
+                        <option>Penjualan Rokok kepada Anak</option>
+                        <option>Bully / Tekanan Sebaya</option>
+                        <option>Informasi Penyalahgunaan Lain</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Lokasi Kejadian <span class="star">*</span></label>
+                    <input type="text" placeholder="Alamat / area kejadian">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi Kejadian <span class="star">*</span></label>
+                <textarea placeholder="Ceritakan secara singkat kejadian yang ingin dilaporkan. Informasi Anda sangat membantu kami!"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Waktu Kejadian</label>
+                <input type="datetime-local">
+            </div>
+            <div class="form-group">
+                <label>Kontak Anda (untuk tindak lanjut) <span class="label-badge">OPSIONAL</span></label>
+                <input type="text" placeholder="No. HP / Email">
+            </div>
+            <div style="background:#fff3cd;border-left:4px solid #ffc107;border-radius:8px;padding:0.8rem 1rem;margin-bottom:1rem;font-size:0.87rem;color:#856404;">
+                🔒 <strong>Kerahasiaan Terjamin:</strong> Data Anda akan dijaga kerahasiaannya dan hanya digunakan untuk keperluan investigasi.
+            </div>
+            <button class="btn-form" onclick="handlePengaduan()">📨 Kirim Pengaduan</button>
+        </div>
+    </div>
+
+    <!-- ====== TOAST ====== -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Modal controls
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function switchModal(from, to) {
+            closeModal(from);
+            setTimeout(() => openModal(to), 200);
+        }
+        // Close on overlay click
+        document.querySelectorAll('.modal-overlay').forEach(el => {
+            el.addEventListener('click', function(e) {
+                if (e.target === this) closeModal(this.id);
+            });
+        });
+        // Toast
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3500);
+        }
+        // Handlers
+        function handleLogin() {
+            closeModal('modal-login');
+            showToast('✅ Berhasil masuk! Selamat datang di Gerakan Anti Narkoba!');
+        }
+        function handleRegister() {
+            closeModal('modal-register');
+            showToast('🎉 Akun berhasil dibuat! Selamat bergabung, Generasi Sehat!');
+        }
+        function handlePengaduan() {
+            closeModal('modal-pengaduan');
+            showToast('📨 Pengaduan berhasil dikirim! Terima kasih atas kepedulian Anda.');
+        }
+    </script>
+
+
+</div><!-- end main-content -->
+
+    <script>
+        // Tab switch
+        function switchTab(tab) {
+            document.getElementById('gform-login').classList.toggle('active', tab==='login');
+            document.getElementById('gform-register').classList.toggle('active', tab==='register');
+            document.getElementById('tab-login').classList.toggle('active', tab==='login');
+            document.getElementById('tab-register').classList.toggle('active', tab==='register');
+        }
+
+        // Toggle password visibility
+        function togglePw(id, el) {
+            const inp = document.getElementById(id);
+            if (inp.type === 'password') { inp.type = 'text'; el.textContent = '🙈'; }
+            else { inp.type = 'password'; el.textContent = '👁️'; }
+        }
+
+        // Demo login
+        function doLogin() {
+            const u = document.getElementById('login-user').value.trim();
+            const p = document.getElementById('login-pass').value;
+            const err = document.getElementById('login-error');
+            if (!u || !p) { err.textContent = 'Harap isi email dan kata sandi.'; err.classList.add('show'); return; }
+            // Demo credentials: admin/1234 or anything with valid format
+            if ((u === 'admin' && p === '1234') || (u.includes('@') && p.length >= 4) || (u.length >= 3 && p.length >= 4)) {
+                err.classList.remove('show');
+                unlockSite('Selamat datang, ' + (u === 'admin' ? 'Admin' : u.split('@')[0]) + '! 🎉');
+            } else {
+                err.textContent = 'Email atau kata sandi tidak valid. Coba: admin / 1234';
+                err.classList.add('show');
+            }
+        }
+
+        // Register
+        function doRegister() {
+            const fname = document.getElementById('reg-fname').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const pass = document.getElementById('reg-pass').value;
+            const agree = document.getElementById('reg-agree').checked;
+            if (!fname || !email || !pass) { alert('Harap lengkapi semua field wajib (*)'); return; }
+            if (!agree) { alert('Harap centang persetujuan terlebih dahulu.'); return; }
+            if (pass.length < 6) { alert('Kata sandi minimal 6 karakter.'); return; }
+            const suc = document.getElementById('reg-success');
+            suc.classList.add('show');
+            setTimeout(() => { suc.classList.remove('show'); switchTab('login'); }, 2000);
+        }
+
+        // Skip
+        function skipLogin() {
+            unlockSite('Selamat datang, Tamu! 👋');
+        }
+
+        // Unlock site
+        function unlockSite(msg) {
+            const gate = document.getElementById('login-gate');
+            gate.classList.add('fade-out');
+            setTimeout(() => {
+                gate.style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflow = '';
+                // Show welcome toast
+                const t = document.getElementById('toast');
+                if (t) { t.textContent = '✅ ' + msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3500); }
+            }, 600);
+        }
+
+        // Lock body scroll while gate is showing
+        document.body.style.overflow = 'hidden';
+    </script>
+
+</body>
+</html>
